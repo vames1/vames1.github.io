@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Oluwaseyi Akindiose | Cloud Engineer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10,10,10,0.95);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #00d4ff;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00d4ff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul a:hover { color: #00d4ff; }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0a0a0a 0%, #0d2137 100%);
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: #00d4ff; }
+
+    .hero p {
+      font-size: 22px;
+      color: #aaaaaa;
+      margin-bottom: 10px;
+    }
+
+    .hero .location {
+      font-size: 16px;
+      color: #00d4ff;
+      margin-bottom: 40px;
+    }
+
+    .hero .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 15px 35px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: #00d4ff;
+      color: #0a0a0a;
+      font-weight: bold;
+    }
+
+    .btn-primary:hover { background: #00b8d9; }
+
+    .btn-secondary {
+      border: 2px solid #00d4ff;
+      color: #00d4ff;
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: #00d4ff;
+      color: #0a0a0a;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .section-title span { color: #00d4ff; }
+
+    /* About */
+    #about {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 50px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      color: #aaaaaa;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .about-text strong {
+      color: #ffffff;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .stat-card {
+      background: #0d2137;
+      border: 1px solid #00d4ff;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .stat-card h3 {
+      font-size: 40px;
+      color: #00d4ff;
+      font-weight: bold;
+    }
+
+    .stat-card p {
+      color: #aaaaaa;
+      margin-top: 10px;
+    }
+
+    /* Skills */
+    #skills {
+      background: #0d0d0d;
+      max-width: 100%;
+      padding: 80px 50px;
+    }
+
+    #skills .section-title {
+      max-width: 1200px;
+      margin: 0 auto 50px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      background: #0a0a0a;
+      border: 1px solid #1a1a1a;
+      border-radius: 10px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .skill-card:hover {
+      border-color: #00d4ff;
+      transform: translateY(-5px);
+    }
+
+    .skill-card .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .skill-card p {
+      color: #aaaaaa;
+      font-size: 14px;
+    }
+
+    /* Projects */
+    #projects {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 50px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #0d2137;
+      border: 1px solid #1a1a1a;
+      border-radius: 10px;
+      padding: 30px;
+      transition: all 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: #00d4ff;
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      font-size: 22px;
+      color: #00d4ff;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      color: #aaaaaa;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      background: #0a0a0a;
+      border: 1px solid #00d4ff;
+      color: #00d4ff;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .project-link {
+      color: #00d4ff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .project-link:hover { text-decoration: underline; }
+
+    /* Contact */
+    #contact {
+      background: #0d0d0d;
+      max-width: 100%;
+      padding: 80px 50px;
+      text-align: center;
+    }
+
+    #contact .section-title {
+      max-width: 1200px;
+      margin: 0 auto 50px;
+    }
+
+    .contact-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-content p {
+      color: #aaaaaa;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      background: #0d2137;
+      border: 1px solid #00d4ff;
+      color: #00d4ff;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+
+    .contact-link:hover {
+      background: #00d4ff;
+      color: #0a0a0a;
+    }
+
+    /* Footer */
+    footer {
+      background: #0a0a0a;
+      border-top: 1px solid #1a1a1a;
+      padding: 30px 50px;
+      text-align: center;
+      color: #aaaaaa;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; }
+      .about-content { grid-template-columns: 1fr; }
+      nav { padding: 15px 20px; }
+      nav ul { gap: 15px; }
+      section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Victor.cloud</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div>
+      <h1>Hi, I'm <span>Victor</span> 👋</h1>
+      <p>Cloud Engineer | DevOps Engineer | AWS | Terraform | Docker | Kubernetes</p>
+      <p class="location">📍 Lagos, Nigeria</p>
+      <div class="buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-secondary">Hire Me</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          I'm <strong>Victor Oluwaseyi Akindiose</strong>, a passionate Cloud 
+          Engineer based in <strong>Lagos, Nigeria</strong>. I specialise in 
+          building, automating and deploying scalable cloud infrastructure on 
+          AWS using modern DevOps tools and best practices.
+        </p>
+        <p>
+          With a background in <strong>UI/UX Design</strong>, I bring a unique 
+          perspective to cloud engineering — combining technical expertise with 
+          an eye for clean, well-structured and efficient systems. I transitioned 
+          into cloud engineering driven by a deep passion for building reliable 
+          infrastructure that powers real-world applications at scale.
+        </p>
+        <p>
+          I am currently completing my <strong>Cloud Engineering certification 
+          with AltSchool Africa</strong>, where I have gained extensive hands-on 
+          experience deploying real infrastructure on AWS. My work spans 
+          Terraform, Docker, Kubernetes, Ansible, CI/CD pipelines, CloudWatch 
+          monitoring and more.
+        </p>
+        <p>
+          I am actively seeking <strong>Cloud Engineer</strong> and 
+          <strong>DevOps Engineer</strong> opportunities where I can contribute 
+          my skills, grow professionally and help teams build world-class 
+          cloud infrastructure. I am hardworking, detail-oriented and committed 
+          to continuous learning.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <h3>10+</h3>
+          <p>Projects Built</p>
+        </div>
+        <div class="stat-card">
+          <h3>15+</h3>
+          <p>AWS Services Used</p>
+        </div>
+        <div class="stat-card">
+          <h3>1+</h3>
+          <p>Year Experience</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Hands-On Learning</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <div id="skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="icon">☁️</div>
+        <h3>AWS</h3>
+        <p>EC2, S3, ECS, EKS, RDS, Lambda, CloudFront, Route53, CloudWatch</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🏗️</div>
+        <h3>Terraform</h3>
+        <p>Infrastructure as Code, Modules, Remote State, Workspaces, Variables</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🐳</div>
+        <h3>Docker</h3>
+        <p>Containers, Images, Dockerfile, Docker Compose, Docker Hub</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">⚙️</div>
+        <h3>Kubernetes</h3>
+        <p>EKS, Deployments, Services, Pods, Node Groups, kubectl, eksctl</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🔧</div>
+        <h3>Ansible</h3>
+        <p>Playbooks, Inventory, Configuration Management, Jinja2 Templates</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🚀</div>
+        <h3>CI/CD</h3>
+        <p>GitHub Actions, Automated Builds, Docker Hub, ECS Deployments</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🐧</div>
+        <h3>Linux</h3>
+        <p>Ubuntu, Amazon Linux, Bash Scripting, CLI, System Administration</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">📊</div>
+        <h3>Monitoring</h3>
+        <p>CloudWatch, Dashboards, Alarms, SNS Alerts, Log Groups</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🔒</div>
+        <h3>Security</h3>
+        <p>IAM, Security Groups, VPC, Key Pairs, Least Privilege</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🌐</div>
+        <h3>Networking</h3>
+        <p>VPC, Subnets, Route Tables, Internet Gateway, Load Balancers</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🐙</div>
+        <h3>Git</h3>
+        <p>GitHub, Version Control, Branching, Pull Requests</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🎨</div>
+        <h3>UI/UX</h3>
+        <p>User Interface Design, User Experience, Wireframing, Prototyping</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>🏗️ AWS Infrastructure with Terraform</h3>
+        <p>Built complete AWS infrastructure including VPC, EC2, S3, IAM, Security Groups, Load Balancer and Auto Scaling using Terraform Infrastructure as Code.</p>
+        <div class="tags">
+          <span class="tag">Terraform</span>
+          <span class="tag">AWS</span>
+          <span class="tag">VPC</span>
+          <span class="tag">EC2</span>
+          <span class="tag">S3</span>
+        </div>
+        <a href="https://github.com/vames1/terraform-aws" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🐳 Dockerised Web Application</h3>
+        <p>Built and deployed a custom Docker web application with Nginx. Implemented Docker Networking, Volumes, Docker Compose and pushed to Docker Hub.</p>
+        <div class="tags">
+          <span class="tag">Docker</span>
+          <span class="tag">Nginx</span>
+          <span class="tag">Docker Compose</span>
+          <span class="tag">Docker Hub</span>
+        </div>
+        <a href="https://github.com/vames1/docker-app" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🚀 AWS ECS Fargate Deployment</h3>
+        <p>Deployed containerised application on AWS ECS Fargate with Application Load Balancer, Auto Scaling and CloudWatch monitoring.</p>
+        <div class="tags">
+          <span class="tag">ECS</span>
+          <span class="tag">Fargate</span>
+          <span class="tag">ALB</span>
+          <span class="tag">Auto Scaling</span>
+        </div>
+        <a href="https://github.com/vames1/terraform-aws" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>⚙️ Kubernetes on AWS EKS</h3>
+        <p>Deployed and managed containerised applications on AWS EKS cluster using kubectl. Created deployments, services and managed node groups.</p>
+        <div class="tags">
+          <span class="tag">Kubernetes</span>
+          <span class="tag">EKS</span>
+          <span class="tag">kubectl</span>
+          <span class="tag">eksctl</span>
+        </div>
+        <a href="https://github.com/vames1/docker-app" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🔧 Ansible Server Configuration</h3>
+        <p>Automated configuration of multiple EC2 servers simultaneously using Ansible playbooks. Installed Nginx and deployed custom web pages using Jinja2 templates.</p>
+        <div class="tags">
+          <span class="tag">Ansible</span>
+          <span class="tag">EC2</span>
+          <span class="tag">Nginx</span>
+          <span class="tag">Jinja2</span>
+        </div>
+        <a href="https://github.com/vames1/ansible-aws" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🔄 CI/CD Pipeline with GitHub Actions</h3>
+        <p>Built a fully automated CI/CD pipeline that builds Docker images, pushes to Docker Hub and deploys to AWS ECS automatically on every code push.</p>
+        <div class="tags">
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Docker</span>
+          <span class="tag">ECS</span>
+        </div>
+        <a href="https://github.com/vames1/docker-app" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>☁️ CloudFront CDN & Route 53</h3>
+        <p>Configured AWS CloudFront CDN distribution for global content delivery with Route 53 DNS management, health checks and failover routing.</p>
+        <div class="tags">
+          <span class="tag">CloudFront</span>
+          <span class="tag">Route 53</span>
+          <span class="tag">DNS</span>
+          <span class="tag">CDN</span>
+        </div>
+        <a href="https://github.com/vames1/terraform-aws" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>⚡ AWS Lambda Serverless Function</h3>
+        <p>Built and deployed a serverless Python function on AWS Lambda with a public Function URL. No servers needed — pay only for execution time.</p>
+        <div class="tags">
+          <span class="tag">Lambda</span>
+          <span class="tag">Serverless</span>
+          <span class="tag">Python</span>
+          <span class="tag">Terraform</span>
+        </div>
+        <a href="https://github.com/vames1/terraform-aws" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🗄️ AWS RDS MySQL Database</h3>
+        <p>Deployed a managed MySQL database on AWS RDS inside a VPC with security groups, subnet groups and automated backups using Terraform.</p>
+        <div class="tags">
+          <span class="tag">RDS</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">VPC</span>
+          <span class="tag">Terraform</span>
+        </div>
+        <a href="https://github.com/vames1/terraform-aws" class="project-link">View on GitHub →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <div class="contact-content">
+      <p>
+        I'm currently open to <strong>Cloud Engineer</strong> and 
+        <strong>DevOps Engineer</strong> opportunities. 
+        Whether you have a question, a project or just want to say hi — 
+        my inbox is always open!
+      </p>
+      <div class="contact-links">
+        <a href="mailto:victoroluwaseyi2018@gmail.com" class="contact-link">📧 Email Me</a>
+        <a href="https://github.com/vames1" class="contact-link">🐙 GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" class="contact-link">💼 LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Victor Oluwaseyi Akindiose | Cloud Engineer | Lagos, Nigeria | Built with ❤️ and deployed on GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
