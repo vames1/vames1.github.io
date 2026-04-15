@@ -42,7 +42,7 @@
     nav ul a {
       color: #ffffff;
       text-decoration: none;
-      font-size: 16px;
+cd /home/vagrant/portfolio      font-size: 16px;
       transition: color 0.3s;
     }
 
@@ -502,78 +502,82 @@
   <div id="projects">
     <h2 class="section-title">My <span>Projects</span></h2>
     <div class="projects-grid">
-<div class="project-card">
-<div class="project-card">
-<div class="project-card">
-<div class="project-card">
-<div class="project-card">
-  <h3>📊 Monitoring Dashboard</h3>
-  <p>Built a complete monitoring stack using Prometheus, Grafana and Node Exporter. Visualises real-time server metrics including CPU, Memory, Disk and Network usage in beautiful dashboards using Docker Compose.</p>
-  <div class="tags">
-    <span class="tag">Prometheus</span>
-    <span class="tag">Grafana</span>
-    <span class="tag">Docker Compose</span>
-    <span class="tag">Node Exporter</span>
-    <span class="tag">Monitoring</span>
-  </div>
-  <a href="https://github.com/vames1/monitoring-dashboard" class="project-link">View on GitHub →</a>
-</div>
-  <h3>⚡ Serverless Todo API</h3>
-  <p>Built a fully serverless REST API with 5 CRUD endpoints using AWS Lambda, API Gateway and DynamoDB. No servers needed — automatically scales to handle any traffic and costs nothing when idle.</p>
-  <div class="tags">
-    <span class="tag">AWS Lambda</span>
-    <span class="tag">API Gateway</span>
-    <span class="tag">DynamoDB</span>
-    <span class="tag">Python</span>
-    <span class="tag">Terraform</span>
-    <span class="tag">Serverless</span>
-  </div>
-  <a href="https://github.com/vames1/serverless-api" class="project-link">View on GitHub →</a>
-</div>
-  <h3>🦊 GitLab CI/CD Pipeline</h3>
-  <p>Built a 3-stage CI/CD pipeline using GitLab's built-in CI/CD system. Pipeline automatically runs test, build and deploy stages on every push to the main branch using .gitlab-ci.yml configuration.</p>
-  <div class="tags">
-    <span class="tag">GitLab</span>
-    <span class="tag">CI/CD</span>
-    <span class="tag">YAML</span>
-    <span class="tag">DevOps</span>
-  </div>
-  <a href="https://github.com/vames1/gitlab-cicd-demo" class="project-link">View on GitHub →</a>
-</div>
-  <h3>⚙️ AWS CodeBuild & CodeDeploy Pipeline</h3>
-  <p>Built a complete AWS native CI/CD pipeline using CodeBuild and CodeDeploy. CodeBuild automatically builds and tests code from GitHub, saves artifacts to S3, and CodeDeploy automatically deploys to EC2 instances running Apache web server.</p>
-  <div class="tags">
-    <span class="tag">CodeBuild</span>
-    <span class="tag">CodeDeploy</span>
-    <span class="tag">S3</span>
-    <span class="tag">EC2</span>
-    <span class="tag">Terraform</span>
-    <span class="tag">CI/CD</span>
-  </div>
-  <a href="https://github.com/vames1/codebuild-demo" class="project-link">View on GitHub →</a>
-</div>
-  <h3>🚀 Project Bedrock — InnovateMart EKS Deployment</h3>
-  <p>Provisioned a production-grade Kubernetes environment on AWS for an e-commerce startup. Deployed the AWS Retail Store microservices app on EKS using Helm, implemented CI/CD with GitHub Actions, configured CloudWatch monitoring and built an event-driven S3 + Lambda architecture.</p>
-  <div class="tags">
-    <span class="tag">Kubernetes</span>
-    <span class="tag">AWS EKS</span>
-    <span class="tag">Terraform</span>
-    <span class="tag">Helm</span>
-    <span class="tag">CI/CD</span>
-    <span class="tag">Lambda</span>
-    <span class="tag">CloudWatch</span>
-  </div>
-  <a href="https://github.com/vames1/project-bedrock" class="project-link">View on GitHub →</a>
-</div>
+
+      <div class="project-card">
+        <h3>📊 Monitoring Dashboard</h3>
+        <p>Built a complete monitoring stack using Prometheus, Grafana and Node Exporter. Visualises real-time server metrics including CPU, Memory, Disk and Network usage in beautiful dashboards using Docker Compose.</p>
+        <div class="tags">
+          <span class="tag">Prometheus</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">Docker Compose</span>
+          <span class="tag">Node Exporter</span>
+          <span class="tag">Monitoring</span>
+        </div>
+        <a href="https://github.com/vames1/monitoring-dashboard" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>⚡ Serverless Todo API</h3>
+        <p>Built a fully serverless REST API with 5 CRUD endpoints using AWS Lambda, API Gateway and DynamoDB. No servers needed — automatically scales to handle any traffic and costs nothing when idle.</p>
+        <div class="tags">
+          <span class="tag">AWS Lambda</span>
+          <span class="tag">API Gateway</span>
+          <span class="tag">DynamoDB</span>
+          <span class="tag">Python</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Serverless</span>
+        </div>
+        <a href="https://github.com/vames1/serverless-api" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🦊 GitLab CI/CD Pipeline</h3>
+        <p>Built a 3-stage CI/CD pipeline using GitLab built-in CI/CD system. Pipeline automatically runs test, build and deploy stages on every push to the main branch using .gitlab-ci.yml configuration.</p>
+        <div class="tags">
+          <span class="tag">GitLab</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">YAML</span>
+          <span class="tag">DevOps</span>
+        </div>
+        <a href="https://github.com/vames1/gitlab-cicd-demo" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>⚙️ AWS CodeBuild and CodeDeploy Pipeline</h3>
+        <p>Built a complete AWS native CI/CD pipeline using CodeBuild and CodeDeploy. CodeBuild automatically builds and tests code from GitHub, saves artifacts to S3, and CodeDeploy deploys to EC2 instances.</p>
+        <div class="tags">
+          <span class="tag">CodeBuild</span>
+          <span class="tag">CodeDeploy</span>
+          <span class="tag">S3</span>
+          <span class="tag">EC2</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">CI/CD</span>
+        </div>
+        <a href="https://github.com/vames1/codebuild-demo" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🚀 Project Bedrock — InnovateMart EKS Deployment</h3>
+        <p>Provisioned a production-grade Kubernetes environment on AWS for an e-commerce startup. Deployed the AWS Retail Store microservices app on EKS using Helm, implemented CI/CD with GitHub Actions and CloudWatch monitoring.</p>
+        <div class="tags">
+          <span class="tag">Kubernetes</span>
+          <span class="tag">AWS EKS</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Helm</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Lambda</span>
+        </div>
+        <a href="https://github.com/vames1/project-bedrock" class="project-link">View on GitHub →</a>
+      </div>
 
       <div class="project-card">
         <h3>🏗️ AWS Infrastructure with Terraform</h3>
-        <p>Built complete AWS infrastructure including VPC, EC2, S3, IAM, Security Groups, Load Balancer and Auto Scaling using Terraform Infrastructure as Code.</p>
+        <p>Built complete AWS infrastructure including VPC, EC2, S3, IAM, ECS Fargate, Load Balancer, Auto Scaling, CloudWatch, Route 53, CloudFront, Lambda and RDS using Terraform Infrastructure as Code.</p>
         <div class="tags">
           <span class="tag">Terraform</span>
           <span class="tag">AWS</span>
           <span class="tag">VPC</span>
-          <span class="tag">EC2</span>
+          <span class="tag">ECS</span>
           <span class="tag">S3</span>
         </div>
         <a href="https://github.com/vames1/terraform-aws" class="project-link">View on GitHub →</a>
@@ -581,43 +585,20 @@
 
       <div class="project-card">
         <h3>🐳 Dockerised Web Application</h3>
-        <p>Built and deployed a custom Docker web application with Nginx. Implemented Docker Networking, Volumes, Docker Compose and pushed to Docker Hub.</p>
+        <p>Built and deployed a custom Docker web application with Nginx. Implemented Docker Networking, Volumes, Docker Compose and automated CI/CD pipeline that deploys to AWS ECS on every push.</p>
         <div class="tags">
           <span class="tag">Docker</span>
           <span class="tag">Nginx</span>
           <span class="tag">Docker Compose</span>
-          <span class="tag">Docker Hub</span>
-        </div>
-        <a href="https://github.com/vames1/docker-app" class="project-link">View on GitHub →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>🚀 AWS ECS Fargate Deployment</h3>
-        <p>Deployed containerised application on AWS ECS Fargate with Application Load Balancer, Auto Scaling and CloudWatch monitoring.</p>
-        <div class="tags">
-          <span class="tag">ECS</span>
-          <span class="tag">Fargate</span>
-          <span class="tag">ALB</span>
-          <span class="tag">Auto Scaling</span>
-        </div>
-        <a href="https://github.com/vames1/terraform-aws" class="project-link">View on GitHub →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>⚙️ Kubernetes on AWS EKS</h3>
-        <p>Deployed and managed containerised applications on AWS EKS cluster using kubectl. Created deployments, services and managed node groups.</p>
-        <div class="tags">
-          <span class="tag">Kubernetes</span>
-          <span class="tag">EKS</span>
-          <span class="tag">kubectl</span>
-          <span class="tag">eksctl</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">AWS ECS</span>
         </div>
         <a href="https://github.com/vames1/docker-app" class="project-link">View on GitHub →</a>
       </div>
 
       <div class="project-card">
         <h3>🔧 Ansible Server Configuration</h3>
-        <p>Automated configuration of multiple EC2 servers simultaneously using Ansible playbooks. Installed Nginx and deployed custom web pages using Jinja2 templates.</p>
+        <p>Automated configuration of multiple AWS EC2 servers simultaneously using Ansible playbooks. Installed Nginx and deployed custom web pages using Jinja2 templates with a single command.</p>
         <div class="tags">
           <span class="tag">Ansible</span>
           <span class="tag">EC2</span>
@@ -629,7 +610,7 @@
 
       <div class="project-card">
         <h3>🔄 CI/CD Pipeline with GitHub Actions</h3>
-        <p>Built a fully automated CI/CD pipeline that builds Docker images, pushes to Docker Hub and deploys to AWS ECS automatically on every code push.</p>
+        <p>Built a fully automated CI/CD pipeline that builds Docker images, pushes to Docker Hub and deploys to AWS ECS automatically on every code push to the master branch.</p>
         <div class="tags">
           <span class="tag">GitHub Actions</span>
           <span class="tag">CI/CD</span>
@@ -637,42 +618,6 @@
           <span class="tag">ECS</span>
         </div>
         <a href="https://github.com/vames1/docker-app" class="project-link">View on GitHub →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>☁️ CloudFront CDN & Route 53</h3>
-        <p>Configured AWS CloudFront CDN distribution for global content delivery with Route 53 DNS management, health checks and failover routing.</p>
-        <div class="tags">
-          <span class="tag">CloudFront</span>
-          <span class="tag">Route 53</span>
-          <span class="tag">DNS</span>
-          <span class="tag">CDN</span>
-        </div>
-        <a href="https://github.com/vames1/terraform-aws" class="project-link">View on GitHub →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>⚡ AWS Lambda Serverless Function</h3>
-        <p>Built and deployed a serverless Python function on AWS Lambda with a public Function URL. No servers needed — pay only for execution time.</p>
-        <div class="tags">
-          <span class="tag">Lambda</span>
-          <span class="tag">Serverless</span>
-          <span class="tag">Python</span>
-          <span class="tag">Terraform</span>
-        </div>
-        <a href="https://github.com/vames1/terraform-aws" class="project-link">View on GitHub →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>🗄️ AWS RDS MySQL Database</h3>
-        <p>Deployed a managed MySQL database on AWS RDS inside a VPC with security groups, subnet groups and automated backups using Terraform.</p>
-        <div class="tags">
-          <span class="tag">RDS</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">VPC</span>
-          <span class="tag">Terraform</span>
-        </div>
-        <a href="https://github.com/vames1/terraform-aws" class="project-link">View on GitHub →</a>
       </div>
 
     </div>
